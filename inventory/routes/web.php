@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,5 @@ Route::controller(LoginRegisterController::class)->group(function() {
 // Rute untuk autentikasi
 Route::middleware('auth')->group(function () {
     Route::resource('customers', CustomerController::class);
+    Route::resource('products', ProductController::class);
 });
