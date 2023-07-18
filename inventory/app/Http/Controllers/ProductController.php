@@ -44,7 +44,7 @@ class ProductController extends Controller
             $product->rawMaterials()->attach($rawMaterialId, ['quantity_raw_materials' => $quantity]);
         }
 
-        return redirect()->route('products.create')->with('success', 'Produksi bricket berhasil ditambahkan.');
+        return redirect()->route('products.index')->with('success', 'Produksi bricket berhasil ditambahkan.');
     }
 
     public function edit($id)

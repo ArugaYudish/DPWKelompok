@@ -56,7 +56,7 @@ class LoginRegisterController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard')
+            return redirect()->route('products.index')
                 ->withSuccess('You have successfully logged in!');
         }
 
