@@ -57,4 +57,9 @@ class User extends Authenticatable
         ]);
     }
 
+    public function customers()
+    {
+        return $this->hasMany(Customer::class);
+    }
+
 }
