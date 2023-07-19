@@ -32,6 +32,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('customers.index') }}">Customers</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('transactions.index') }}">Transactions</a>
+                            </li>
                         </ul>
                     </div>    
                     <li class="nav-item dropdown">

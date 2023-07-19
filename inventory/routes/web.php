@@ -4,17 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\TransactionController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('auth/login');
@@ -33,4 +25,9 @@ Route::controller(LoginRegisterController::class)->group(function() {
 Route::middleware('auth')->group(function () {
     Route::resource('customers', CustomerController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('transactions', TransactionController::class);
+    Route::get('/transactions/{transaction}/invoice', [TransactionController::class, 'generateInvoicePdf'])->name('transactions.invoice');
+    Route::post('/transactions/{transaction}/send-invoice-email', [TransactionController::class, 'sendInvoiceEmail'])->name('transactions.sendInvoiceEmail');
 });
+
+Route::get('/invoices/pdf', [PDFController::class, 'generateInvoicePDF'])->name('invoices.pdf');
