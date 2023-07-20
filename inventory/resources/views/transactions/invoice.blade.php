@@ -118,7 +118,7 @@
             <td>
                 <div class="box-text">
                     <p>{{ $transaction->customer->name }}</p>
-                    <p>360012</p>
+                    <p>{{ $transaction->customer->postalcode }}</p>
                     <p>{{ $transaction->customer->address }}</p>
                     <p>Indonesia</p>
                     <p>Contact : {{ $transaction->customer->phone_number }}</p>
@@ -181,14 +181,12 @@
             <td colspan="7">
                 <div class="total-part">
                     <div class="total-left w-85 float-left" align="right">
-                        <p>Sub Total</p>
-                        <p>Tax (18%)</p>
+                        <p>Tax (0%)</p>
                         <p>Total Payable</p>
                     </div>
                     <div class="total-right w-15 float-left text-bold" align="right">
-                        <p>$20</p>
-                        <p>$20</p>
-                        <p>$330.00</p>
+                        <p>Rp. 0</p>
+                        <p>Rp. {{ $transaction->total_amount }}</p>
                     </div>
                     <div style="clear: both;"></div>
                 </div> 

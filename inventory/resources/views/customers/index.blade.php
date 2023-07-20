@@ -17,6 +17,7 @@
                                     <th>Phone Number</th>
                                     <th>Email</th>
                                     <th>Address</th>
+                                    <th>Postalcode</th>
                                     <th>Customer Type</th> 
                                     <th>Action</th>
                                 </tr>
@@ -28,6 +29,7 @@
                                     <td>{{ $customer->phone_number }}</td>
                                     <td>{{ $customer->email }}</td>
                                     <td>{{ $customer->address }}</td>
+                                    <td>{{ $customer->postalcode }}</td>
                                     <td>{{ $customer->customer_type }}</td> 
                                     <td>
                                         <a href="{{ route('customers.show', $customer->id) }}" class="btn btn-info">View</a>

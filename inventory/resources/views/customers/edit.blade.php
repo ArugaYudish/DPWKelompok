@@ -28,6 +28,10 @@
                             <textarea name="address" class="form-control" required>{{ $customer->address }}</textarea>
                         </div>
                         <div class="form-group">
+                            <label for="postalcode">Postalcode</label>
+                            <input type="text" name="postalcode" class="form-control" value="{{ $customer->postalcode }}" required>
+                        </div>
+                        <div class="form-group">
                             <label for="customer_type">Customer Type</label>
                             <select name="customer_type" class="form-control" required>
                                 <option value="personal" {{ $customer->customer_type === 'personal' ? 'selected' : '' }}>Personal</option>

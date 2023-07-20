@@ -27,6 +27,7 @@ class CustomerController extends Controller
             'phone_number' => 'required',
             'email' => 'required|email',
             'address' => 'required',
+            'postalcode' => 'required',
             'customer_type' => 'required|in:personal,company', 
         ]);
 
@@ -35,6 +36,7 @@ class CustomerController extends Controller
             'phone_number' => $request->get('phone_number'),
             'email' => $request->get('email'),
             'address' => $request->get('address'),
+            'postalcode' => $request->get('postalcode'),
             'customer_type' => $request->get('customer_type'),
         ]);
 
@@ -64,6 +66,7 @@ class CustomerController extends Controller
             'phone_number' => 'required',
             'email' => 'required|email',
             'address' => 'required',
+            'postalcode' => 'required',
             'customer_type' => 'required|in:personal,company',
         ]);
 
@@ -72,6 +75,7 @@ class CustomerController extends Controller
             'phone_number' => $request->get('phone_number'),
             'email' => $request->get('email'),
             'address' => $request->get('address'),
+            'postalcode' => $request->get('postalcode'),
             'customer_type' => $request->get('customer_type'),
         ]);
 

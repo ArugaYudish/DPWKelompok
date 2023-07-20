@@ -27,6 +27,10 @@
                             <textarea name="address" class="form-control" required></textarea>
                         </div>
                         <div class="form-group">
+                            <label for="postalcode">Postalcode</label>
+                            <input type="text" name="postalcode" class="form-control" required>
+                        </div>
+                        <div class="form-group">
                             <label for="customer_type">Customer Type</label>
                             <select name="customer_type" class="form-control" required>
                                 <option value="personal">Personal</option>
