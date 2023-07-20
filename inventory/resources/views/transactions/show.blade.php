@@ -25,6 +25,10 @@
                 <td>{{ $transaction->issue_date }}</td>
             </tr>
             <tr>
+                <th scope="row">Jumlah Produk</th>
+                <td>{{ $transaction->quantity_product }}</td>
+            </tr>
+            <tr>
                 <th scope="row">Total Amount (Rupiah)</th>
                 <td>{{ $transaction->total_amount }}</td>
             </tr>

@@ -17,6 +17,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">Pelanggan</th>
                 <th scope="col">Tanggal Penerbitan</th>
+                <th scope="col">Jumlah Produk</th>
                 <th scope="col">Total Amount</th>
                 <th scope="col">Status</th>
                 <th scope="col">Tanggal Jatuh Tempo</th>
@@ -30,6 +31,7 @@
                     <th scope="row">{{ $transaction->id }}</th>
                     <td>{{ $transaction->customer->name }}</td>
                     <td>{{ $transaction->issue_date }}</td>
+                    <td>{{ $transaction->quantity_product }}</td>
                     <td>{{ $transaction->total_amount }}</td>
                     <td>{{ $transaction->status }}</td>
                     <td>{{ $transaction->due_date }}</td>

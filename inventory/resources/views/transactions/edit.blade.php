@@ -29,6 +29,10 @@
             <input type="date" name="issue_date" id="issue_date" class="form-control" value="{{ $transaction->issue_date }}" required>
         </div>
         <div class="mb-3">
+            <label for="quantity_product" class="form-label">Jumlah Produk</label>
+            <input type="number" name="quantity_product" id="quantity_product" class="form-control" value="{{ $transaction->quantity_product }}" required>
+        </div>
+        <div class="mb-3">
             <label for="total_amount" class="form-label">Total Amount (Rupiah)</label>
             <input type="number" name="total_amount" id="total_amount" class="form-control" value="{{ $transaction->total_amount }}" required>
         </div>

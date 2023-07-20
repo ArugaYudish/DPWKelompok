@@ -37,6 +37,7 @@ class TransactionController extends Controller
             'issue_date' => 'required|date',
             'total_amount' => 'required|numeric',
             'status' => 'required|in:open,close',
+            'quantity_product' => 'required|integer|min:1',
             'due_date' => 'required|date',
             'payment_method' => 'required|in:kredit,debit,tunai',
         ]);
@@ -59,6 +60,7 @@ class TransactionController extends Controller
             'issue_date' => 'required|date',
             'total_amount' => 'required|numeric',
             'status' => 'required|in:open,close',
+            'quantity_product' => 'required|integer|min:1',
             'due_date' => 'required|date',
             'payment_method' => 'required|in:kredit,debit,tunai',
         ]);
