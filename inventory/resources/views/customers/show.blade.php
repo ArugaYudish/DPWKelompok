@@ -12,6 +12,7 @@
                     <p><strong>Phone Number:</strong> {{ $customer->phone_number }}</p>
                     <p><strong>Email:</strong> {{ $customer->email }}</p>
                     <p><strong>Address:</strong> {{ $customer->address }}</p>
+                    <p><strong>Customer Type:</strong> {{ $customer->customer_type }}</p> 
 
                     <a href="{{ route('customers.edit', $customer->id) }}" class="btn btn-primary">Edit</a>
                     <form action="{{ route('customers.destroy', $customer->id) }}" method="POST" class="d-inline">

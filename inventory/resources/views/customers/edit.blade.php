@@ -27,6 +27,13 @@
                             <label for="address">Address</label>
                             <textarea name="address" class="form-control" required>{{ $customer->address }}</textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="customer_type">Customer Type</label>
+                            <select name="customer_type" class="form-control" required>
+                                <option value="personal" {{ $customer->customer_type === 'personal' ? 'selected' : '' }}>Personal</option>
+                                <option value="company" {{ $customer->customer_type === 'company' ? 'selected' : '' }}>Company</option>
+                            </select>
+                        </div>
                         <button type="submit" class="btn btn-primary">Update Customer</button>
                         <a href="{{ route('customers.index') }}" class="btn btn-secondary">Cancel</a>
                     </form>

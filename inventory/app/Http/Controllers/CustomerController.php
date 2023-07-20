@@ -15,7 +15,9 @@ class CustomerController extends Controller
 
     public function create()
     {
-        return view('customers.create');
+        return view('customers.create', [
+            'customerTypes' => ['personal', 'company'] 
+        ]);
     }
 
     public function store(Request $request)
@@ -25,6 +27,7 @@ class CustomerController extends Controller
             'phone_number' => 'required',
             'email' => 'required|email',
             'address' => 'required',
+            'customer_type' => 'required|in:personal,company', 
         ]);
 
         $customer = new Customer([
@@ -32,6 +35,7 @@ class CustomerController extends Controller
             'phone_number' => $request->get('phone_number'),
             'email' => $request->get('email'),
             'address' => $request->get('address'),
+            'customer_type' => $request->get('customer_type'),
         ]);
 
         auth()->user()->customers()->save($customer);
@@ -47,7 +51,10 @@ class CustomerController extends Controller
 
     public function edit(Customer $customer)
     {
-        return view('customers.edit', compact('customer'));
+        return view('customers.edit', [
+            'customer' => $customer,
+            'customerTypes' => ['personal', 'company'] 
+        ]);
     }
 
     public function update(Request $request, Customer $customer)
@@ -57,6 +64,7 @@ class CustomerController extends Controller
             'phone_number' => 'required',
             'email' => 'required|email',
             'address' => 'required',
+            'customer_type' => 'required|in:personal,company',
         ]);
 
         $customer->update([
@@ -64,6 +72,7 @@ class CustomerController extends Controller
             'phone_number' => $request->get('phone_number'),
             'email' => $request->get('email'),
             'address' => $request->get('address'),
+            'customer_type' => $request->get('customer_type'),
         ]);
 
         return redirect()->route('customers.index')

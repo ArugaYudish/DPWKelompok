@@ -26,6 +26,13 @@
                             <label for="address">Address</label>
                             <textarea name="address" class="form-control" required></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="customer_type">Customer Type</label>
+                            <select name="customer_type" class="form-control" required>
+                                <option value="personal">Personal</option>
+                                <option value="company">Company</option>
+                            </select>
+                        </div>
                         <button type="submit" class="btn btn-primary">Add Customer</button>
                         <a href="{{ route('customers.index') }}" class="btn btn-secondary">Cancel</a>
                     </form>
