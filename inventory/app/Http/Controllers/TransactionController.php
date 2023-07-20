@@ -89,7 +89,6 @@ class TransactionController extends Controller
         $filePath = storage_path('app/public/invoices/invoice_' . $transaction->id . '.pdf');
         $pdf->save($filePath);
 
-        // Kirim email dengan invoice ke pelanggan
         Mail::to($transaction->customer->email)->send(new InvoiceEmail($transaction, $filePath));
 
         return redirect()->route('transactions.index')->with('success', 'Invoice berhasil dikirim melalui email.');

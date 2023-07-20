@@ -12,7 +12,8 @@ class RawMaterialController extends Controller
      */
     public function index()
     {
-        //
+        $rawMaterials = RawMaterial::all();
+        return view('raw_materials.index', compact('rawMaterials'));
     }
 
     /**

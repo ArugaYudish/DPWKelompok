@@ -30,6 +30,9 @@
                                 <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('raw_materials.index') }}">Raw Material</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('products.index') }}">Products</a>
                             </li>
                             <li class="nav-item">
@@ -37,6 +40,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('transactions.index') }}">Transactions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('sales.graph') }}">Graph Sales</a>
                             </li>
                         </ul>
                     </div>    

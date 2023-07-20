@@ -18,16 +18,12 @@ class Transaction extends Model
 
     public function validateQuantityProduct()
     {
-        // Get the total quantity of the product requested in this transaction
         $requestedQuantity = $this->quantity_product;
 
-        // Get the total quantity of the product already sold in previous transactions
         $soldQuantity = Transaction::where('status', 'close')->sum('quantity_product');
 
-        // Get the total quantity of the product available in the products table
         $availableQuantity = Product::sum('quantity') - $soldQuantity;
 
-        // Check if the requested quantity exceeds the available quantity
         if ($requestedQuantity > $availableQuantity) {
             throw ValidationException::withMessages([
                 'quantity_product' => 'The requested quantity exceeds the available quantity of the product.',
@@ -39,7 +35,7 @@ class Transaction extends Model
 
     public function save(array $options = [])
     {
-        // Perform the validation before saving the transaction
+        
         $this->validateQuantityProduct();
 
         parent::save($options);
