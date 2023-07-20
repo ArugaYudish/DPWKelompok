@@ -3,6 +3,7 @@
 @section('content')
     <h1>Data Produk Bricket</h1>
     <a href="{{ route('products.create') }}" class="btn btn-primary mb-2">Tambah Produksi Bricket</a>
+    <p>Total Quantity: {{ $totalQuantity }}</p>
     <table class="table">
         <thead>
             <tr>

@@ -11,7 +11,8 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::with('rawMaterials')->get();
-        return view('products.index', compact('products'));
+        $totalQuantity = $products->sum('quantity');
+        return view('products.index', compact('products', 'totalQuantity'));
     }
 
     public function show($id)

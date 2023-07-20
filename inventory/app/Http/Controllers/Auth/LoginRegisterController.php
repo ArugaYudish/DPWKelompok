@@ -56,7 +56,7 @@ class LoginRegisterController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('products.index')
+            return redirect()->route('dashboard')
                 ->withSuccess('You have successfully logged in!');
         }
 
@@ -64,19 +64,6 @@ class LoginRegisterController extends Controller
             'email' => 'Email or Password not correct',
         ])->onlyInput('email');
 
-    }
-
-    // Display a dashboard to authenticated users.
-    public function dashboard()
-    {
-        if (Auth::check()) {
-            return view('auth.dashboard');
-        }
-
-        return redirect()->route('login')
-            ->withErrors([
-                'email' => 'Please login to access the dashboard.',
-            ])->onlyInput('email');
     }
 
     // Log out the user from application.

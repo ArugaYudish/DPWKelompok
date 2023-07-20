@@ -27,6 +27,9 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('products.index') }}">Products</a>
                             </li>
                             <li class="nav-item">

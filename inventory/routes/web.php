@@ -6,6 +6,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\DashboardController;
 
 
 Route::get('/', function () {
@@ -17,12 +18,13 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/store', 'store')->name('store');
     Route::get('/login', 'login')->name('login');
     Route::post('/authenticate', 'authenticate')->name('authenticate');
-    Route::get('/dashboard', 'dashboard')->name('dashboard');
+    // Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
 });
 
 // Rute untuk autentikasi
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::resource('customers', CustomerController::class);
     Route::resource('products', ProductController::class);
     Route::resource('transactions', TransactionController::class);
