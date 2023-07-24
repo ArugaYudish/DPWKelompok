@@ -56,7 +56,7 @@
             <li
                 class="nav-item {{ request()->routeIs('dashboard.dashboard')  ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('dashboard') }}">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             <li
@@ -72,13 +72,20 @@
                     <span>Data Customers</span></a>
             </li>
 
+            <li
+                class="nav-item {{ request()->routeIs('transactions.index') || request()->routeIs('transactions.create') || request()->routeIs('transactions.edit') || request()->routeIs('transactions.show') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('transactions.index') }}">
+                    <i class="fas fa-fw fa-shopping-cart"></i>
+                    <span>Transactions</span></a>
+            </li>
+
             <!-- <li class="nav-item {{ request()->routeIs('customers.index') || request()->routeIs('customers.create') || request()->routeIs('customers.edit') || request()->routeIs('customers.show') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('customers.index') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Customers</span></a>
             </li> -->
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-shopping-cart"></i>
@@ -91,7 +98,7 @@
                         <a class="collapse-item" href="#">Invoice</a>
                     </div>
                 </div>
-            </li>
+            </li> --}}
             <li class="nav-item {{ request()->routeIs('sales.graph') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('sales.graph') }}">
                     <i class="fas fa-fw fa-chart-area"></i>

@@ -1,0 +1,17 @@
+.action-column {
+    width: 120px;
+    text-align: center;
+}
+
+.action-column .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.jenis-pelanggan-container {
+    margin-left: 10px;
+}
