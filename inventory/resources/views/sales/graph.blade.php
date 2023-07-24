@@ -24,7 +24,7 @@
         
        
 
-        <div class="row d-flex justify-content-between" style="width: 100%; margin: auto;">
+        <div class="row d-flex justify-content-between mt-4" style="width: 100%; margin: auto;">
 
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">

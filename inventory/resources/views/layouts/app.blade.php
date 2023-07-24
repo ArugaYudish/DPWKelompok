@@ -54,6 +54,12 @@
             </li> -->
 
             <li
+                class="nav-item {{ request()->routeIs('dashboard.dashboard')  ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('dashboard') }}">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Dashboard</span></a>
+            </li>
+            <li
                 class="nav-item {{ request()->routeIs('products.index') || request()->routeIs('products.create') || request()->routeIs('products.edit') || request()->routeIs('products.show') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('products.index') }}">
                     <i class="fas fa-fw fa-table"></i>
