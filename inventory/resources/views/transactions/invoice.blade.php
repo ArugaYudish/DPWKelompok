@@ -151,9 +151,6 @@
         <p class="m-0 pt-5 w-100 text-bold text-invoice">Issue Date - <span class="gray-color">{{ $transaction->issue_date }}</span></p>
         <p class="m-0 pt-5 w-100 text-bold text-invoice">Due Date - <span class="gray-color">{{ $transaction->due_date }}</span></p>
     </div>
-    <div class="w-50 float-left logo mt-5" align="right">
-        <img src="https://www.nicesnippets.com/image/imgpsh_fullsize.png">
-    </div>
     <div style="clear: both;"></div>
 </div>
 <div class="table-section bill-tbl w-100 mt-10">
