@@ -21,9 +21,8 @@
                 </div>
             </form>
         </div>
-        <div style="width: 80%; margin: auto;">
-            <p class="mt-2" style="color:blue;">Total Amount: <span id="totalAmount">-</span></p>
-        </div>
+        
+       
 
         <div class="row d-flex justify-content-between" style="width: 80%; margin: auto;">
 
@@ -33,8 +32,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Earnings (Monthly)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                    Sales (Last 1 month)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $monthlyTotalAmount }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -49,8 +48,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Earnings (Monthly)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                     Sales (Last 3 month)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $threeMonthsTotalAmount }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -65,8 +64,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Earnings (Monthly)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                     Sales (Last 1 year)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $oneYearTotalAmount }}</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -81,8 +80,8 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Earnings (Monthly)</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                    Sales (Range Date)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"><span id="totalAmount">-</span></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -92,7 +91,7 @@
                 </div>
             </div>
             <div class="col-6 mt-1  p-2 h-100 " margin: auto;">
-                <div class="border p-2 h-100" style="border-radius:8px;"><canvas id="monthlySalesChart"></canvas>
+                <div class="border p-2 " style="border-radius:8px;"><canvas id="monthlySalesChart"></canvas>
                 </div>
             </div>
 
@@ -107,6 +106,8 @@
             <div class="col-6 mt-1  p-2 " margin: auto;">
                 <div class="border p-2" style="border-radius:8px;"><canvas id="customSalesChart"></canvas></div>
             </div>
+
+          
         </div>
 
     </div>
