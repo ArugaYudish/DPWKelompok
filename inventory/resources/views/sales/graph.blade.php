@@ -4,7 +4,7 @@
     <div class="bg-white py-4 mb-5">
 
         <div class="h3 pl-4 py-2 border-bottom">Graph</div>
-        <div class="border-bottom p-3" style="width: 80%; margin: auto;">
+        <div class="border-bottom p-3" style="width: 100%; margin: auto;">
             <form onsubmit="return false" class="row">
                 <div class="col-sm-4 text-center ">
                     Start Date
@@ -24,7 +24,7 @@
         
        
 
-        <div class="row d-flex justify-content-between" style="width: 80%; margin: auto;">
+        <div class="row d-flex justify-content-between" style="width: 100%; margin: auto;">
 
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
