@@ -1,21 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Detail Produk Bricket - ID: {{ $product->id }}</h1>
-    <p>Tanggal Produksi: {{ $product->date }}</p>
-    <p>Jumlah Produk (kg): {{ $product->quantity }}</p>
-    <h3>Bahan Baku</h3>
-    <ul>
-        @foreach ($product->rawMaterials as $rawMaterial)
-            <li>{{ $rawMaterial->name }} ({{ $rawMaterial->pivot->quantity_raw_materials }} kg)</li>
-        @endforeach
-    </ul>
-    <a href="{{ route('products.edit', ['product' => $product->id]) }}" class="btn btn-primary">Edit</a>
-
-    <form method="POST" action="{{ route('products.destroy', ['product' => $product->id]) }}" class="d-inline">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus produksi bricket ini?')">Hapus</button>
-    </form>
-    <a href="{{ route('products.index') }}" class="btn btn-secondary">Back to List</a>
+    <div class="card w-100" style="">
+        <div class="card-body">
+            <h3 class="card-title font-weight-bold border-bottom">Detail Produk </h3>
+            <h6 class="card-subtitle my-2 text-body-secondary">Bricket - ID: {{ $product->id }}</h6>
+            <h6 class="card-subtitle my-2 text-body-secondary">Tanggal Produksi: {{ $product->date }}</h6>
+            <h6 class="card-subtitle my-2 text-body-secondary">Jumlah Produk (kg): {{ $product->quantity }}</h6>
+            <p class="card-text">
+            <h4 class="card-title font-weight-bold"> Bahan Baku</h4>
+            <ul>
+                @foreach ($product->rawMaterials as $rawMaterial)
+                    <li>{{ $rawMaterial->name }} ({{ $rawMaterial->pivot->quantity_raw_materials }} kg)</li>
+                @endforeach
+            </ul>
+            </p>
+            <a href="{{ route('products.index') }}" class="card-link btn btn-primary">Back</a>
+        </div>
+    </div>
+   
 @endsection

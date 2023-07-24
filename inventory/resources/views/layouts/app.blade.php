@@ -16,6 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('style/css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -46,32 +47,30 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
-            </li>
+            </li> -->
 
-            <li class="nav-item {{ request()->routeIs('products.index') || request()->routeIs('products.create') || request()->routeIs('products.edit') || request()->routeIs('products.show') ? 'active' : '' }}">
+            <li
+                class="nav-item {{ request()->routeIs('products.index') || request()->routeIs('products.create') || request()->routeIs('products.edit') || request()->routeIs('products.show') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('products.index') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data products</span></a>
             </li>
-            <li class="nav-item {{ request()->routeIs('customers.index') || request()->routeIs('customers.create') || request()->routeIs('customers.edit') || request()->routeIs('customers.show') ? 'active' : '' }}">
+            <li
+                class="nav-item {{ request()->routeIs('customers.index') || request()->routeIs('customers.create') || request()->routeIs('customers.edit') || request()->routeIs('customers.show') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('customers.index') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Customers</span></a>
             </li>
-            <li class="nav-item {{ request()->routeIs('customers.index') || request()->routeIs('customers.create') || request()->routeIs('customers.edit') || request()->routeIs('customers.show') ? 'active' : '' }}">
+
+            <!-- <li class="nav-item {{ request()->routeIs('customers.index') || request()->routeIs('customers.create') || request()->routeIs('customers.edit') || request()->routeIs('customers.show') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('customers.index') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Data Customers</span></a>
-            </li>
-            <li class="nav-item {{ request()->routeIs('customers.index') || request()->routeIs('customers.create') || request()->routeIs('customers.edit') || request()->routeIs('customers.show') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('customers.index') }}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Data Customers</span></a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -86,6 +85,11 @@
                         <a class="collapse-item" href="#">Invoice</a>
                     </div>
                 </div>
+            </li>
+            <li class="nav-item {{ request()->routeIs('sales.graph') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('sales.graph') }}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Graph</span></a>
             </li>
 
             <!-- Divider -->
@@ -119,8 +123,8 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small"
+                                placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -178,7 +182,8 @@
                                     </div>
                                     <div>
                                         <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <span class="font-weight-bold">A new monthly report is ready to
+                                            download!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -203,7 +208,8 @@
                                         Spending Alert: We've noticed unusually high spending for your account.
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                    Alerts</a>
                             </div>
                         </li>
 
@@ -223,8 +229,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -235,8 +240,7 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -247,20 +251,20 @@
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                        <div class="text-truncate">Last month's report looks great, I am very happy
+                                            with
                                             the progress so far, keep up the good work!</div>
                                         <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
+                                        <img class="rounded-circle"
+                                            src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
@@ -269,7 +273,8 @@
                                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More
+                                    Messages</a>
                             </div>
                         </li>
 
@@ -299,7 +304,8 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
