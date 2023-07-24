@@ -15,7 +15,11 @@ class SalesGraphController extends Controller
     $threeMonthsSales = $this->getSalesDataByRange(3);
     $oneYearSales = $this->getSalesDataByRange(12);
 
-    return view('sales.graph', compact('monthlySales', 'threeMonthsSales', 'oneYearSales'));
+    $monthlyTotalAmount = $monthlySales->sum('total_amount');
+    $threeMonthsTotalAmount = $threeMonthsSales->sum('total_amount');
+    $oneYearTotalAmount = $oneYearSales->sum('total_amount');
+
+    return view('sales.graph', compact('monthlySales', 'threeMonthsSales', 'oneYearSales', 'monthlyTotalAmount', 'threeMonthsTotalAmount', 'oneYearTotalAmount'));
   }
 
   private function getSalesDataByRange($months)

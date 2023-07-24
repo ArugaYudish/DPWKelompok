@@ -44,6 +44,18 @@
             <div class="col-6 mt-1  p-2 " margin: auto;">
                 <div class="border p-2" style="border-radius:8px;" ><canvas id="customSalesChart"></canvas></div>
             </div>
+
+            <div style="width: 80%; margin: auto;">
+                <p class="mt-2" style="color:blue;">Total Amount (1 Bulan Terakhir): <span>{{ $monthlyTotalAmount }}</span></p>
+            </div>
+
+            <div style="width: 80%; margin: auto;">
+                <p class="mt-2" style="color:blue;">Total Amount (3 Bulan Terakhir): <span>{{ $threeMonthsTotalAmount }}</span></p>
+            </div>
+
+            <div style="width: 80%; margin: auto;">
+                <p class="mt-2" style="color:blue;">Total Amount (1 Tahun Terakhir): <span>{{ $oneYearTotalAmount }}</span></p>
+            </div>
         </div>
 
     </div>
