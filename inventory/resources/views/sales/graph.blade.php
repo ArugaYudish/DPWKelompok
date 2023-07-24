@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="bg-white py-4 mb-5">
+
+
+    <div class="bg-white py-2 mb-5">
+
+    <div class="h3 pl-4 py-2 border-bottom" >Graph</div>
         <div class="border-bottom p-3" style="width: 80%; margin: auto;">
             <form onsubmit="return false" class="row">
                 <div class="col-sm-4 text-center ">
