@@ -6,34 +6,40 @@
             <form onsubmit="return false" class="row">
                 <div class="col-sm-4 text-center ">
                     Start Date
-                    <input class="w-100 px-2 py-1" style="border-radius:20px; border:1px solid grey;" type="date" id="startDate">
+                    <input class="w-100 px-2 py-1" style="border-radius:20px; border:1px solid grey;" type="date"
+                        id="startDate">
                 </div>
                 <div class="col-sm-4 text-center ">
                     End Date
-                    <input class="w-100 px-2 py-1" style="border-radius:20px; border:1px solid grey;" type="date" id="endDate">
+                    <input class="w-100 px-2 py-1" style="border-radius:20px; border:1px solid grey;" type="date"
+                        id="endDate">
                 </div>
                 <div class="col-sm-4">
-                    <button class=" btn btn-primary float-right mt-3"  onclick="drawCustomChart()">Show Custom Chart</button>
+                    <button class=" btn btn-primary float-right mt-3" onclick="drawCustomChart()">Show Custom Chart</button>
                 </div>
             </form>
         </div>
-        <div style="width: 80%; margin: auto;" >
-            <p  class="mt-2" style="color:blue;" >Total Amount: <span id="totalAmount">-</span></p>
-        </div>
         <div style="width: 80%; margin: auto;">
-            <canvas id="monthlySalesChart"></canvas>
+            <p class="mt-2" style="color:blue;">Total Amount: <span id="totalAmount">-</span></p>
         </div>
 
-        <div style="width: 80%; margin: auto;">
-            <canvas id="threeMonthsSalesChart"></canvas>
-        </div>
+        <div class="row d-flex justify-content-between" style="width: 80%; margin: auto;">
+            <div class="col-6 mt-1  p-2  " margin: auto;">
+                <div class="border p-2" style="border-radius:8px;" ><canvas id="monthlySalesChart"></canvas>
+                </div>
+            </div>
 
-        <div style="width: 80%; margin: auto;">
-            <canvas id="oneYearSalesChart"></canvas>
-        </div>
+            <div class="col-6 mt-1  p-2 " margin: auto;">
+                <div class="border p-2" style="border-radius:8px;" ><canvas id="threeMonthsSalesChart"></canvas></div>
+            </div>
 
-        <div style="width: 80%; margin: auto;">
-            <canvas id="customSalesChart"></canvas>
+            <div class="col-6 mt-1  p-2 " margin: auto;">
+                <div class="border p-2" style="border-radius:8px;" ><canvas id="oneYearSalesChart"></canvas></div>
+            </div>
+
+            <div class="col-6 mt-1  p-2 " margin: auto;">
+                <div class="border p-2" style="border-radius:8px;" ><canvas id="customSalesChart"></canvas></div>
+            </div>
         </div>
 
     </div>
