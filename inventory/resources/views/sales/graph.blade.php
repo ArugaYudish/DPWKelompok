@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="bg-white py-4 mb-5">
 
-
-    <div class="bg-white py-2 mb-5">
-
-    <div class="h3 pl-4 py-2 border-bottom" >Graph</div>
+        <div class="h3 pl-4 py-2 border-bottom">Graph</div>
         <div class="border-bottom p-3" style="width: 80%; margin: auto;">
             <form onsubmit="return false" class="row">
                 <div class="col-sm-4 text-center ">
@@ -28,33 +26,86 @@
         </div>
 
         <div class="row d-flex justify-content-between" style="width: 80%; margin: auto;">
-            <div class="col-6 mt-1  p-2  " margin: auto;">
-                <div class="border p-2" style="border-radius:8px;" ><canvas id="monthlySalesChart"></canvas>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Earnings (Monthly)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Earnings (Monthly)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Earnings (Monthly)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Earnings (Monthly)</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mt-1  p-2 h-100 " margin: auto;">
+                <div class="border p-2 h-100" style="border-radius:8px;"><canvas id="monthlySalesChart"></canvas>
                 </div>
             </div>
 
             <div class="col-6 mt-1  p-2 " margin: auto;">
-                <div class="border p-2" style="border-radius:8px;" ><canvas id="threeMonthsSalesChart"></canvas></div>
+                <div class="border p-2" style="border-radius:8px;"><canvas id="threeMonthsSalesChart"></canvas></div>
             </div>
 
             <div class="col-6 mt-1  p-2 " margin: auto;">
-                <div class="border p-2" style="border-radius:8px;" ><canvas id="oneYearSalesChart"></canvas></div>
+                <div class="border p-2" style="border-radius:8px;"><canvas id="oneYearSalesChart"></canvas></div>
             </div>
 
             <div class="col-6 mt-1  p-2 " margin: auto;">
-                <div class="border p-2" style="border-radius:8px;" ><canvas id="customSalesChart"></canvas></div>
-            </div>
-
-            <div style="width: 80%; margin: auto;">
-                <p class="mt-2" style="color:blue;">Total Amount (1 Bulan Terakhir): <span>{{ $monthlyTotalAmount }}</span></p>
-            </div>
-
-            <div style="width: 80%; margin: auto;">
-                <p class="mt-2" style="color:blue;">Total Amount (3 Bulan Terakhir): <span>{{ $threeMonthsTotalAmount }}</span></p>
-            </div>
-
-            <div style="width: 80%; margin: auto;">
-                <p class="mt-2" style="color:blue;">Total Amount (1 Tahun Terakhir): <span>{{ $oneYearTotalAmount }}</span></p>
+                <div class="border p-2" style="border-radius:8px;"><canvas id="customSalesChart"></canvas></div>
             </div>
         </div>
 
