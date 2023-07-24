@@ -34,17 +34,6 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Phone Number</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                            <th>Postalcode</th>
-                            <th>Customer Type</th> 
-                            <th>Actions</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         @foreach ($customers as $customer)
                         <tr>

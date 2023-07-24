@@ -6,7 +6,7 @@
         <h1 class="h3 mb-2 text-gray-800">Detail Transaction</h1>
 
         <!-- Button generate & send invoice-->
-        <a href="{{ route('transactions.invoice', ['transaction' => $transaction->id]) }}" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><i
+        <a href="{{ route('transactions.invoice', ['transaction' => $transaction->id]) }}" target="_blank" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><i
             class="fas fa-download fa-sm text-white-50"></i>  Generate Invoice</a>
 
         <form action="{{ route('transactions.sendInvoiceEmail', ['transaction' => $transaction->id]) }}" method="post" class="d-inline">

@@ -42,19 +42,6 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>ID</th>
-                            <th>Customer</th>
-                            <th>Date</th>
-                            <th>Quantity Product</th>
-                            <th>Total Amount</th>
-                            <th>Status</th> 
-                            <th>Due Date</th>
-                            <th>Payment Method</th>
-                            <th>Actions</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         @foreach ($transactions as $transaction)
                         <tr>
