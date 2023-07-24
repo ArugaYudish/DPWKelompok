@@ -31,13 +31,26 @@ class DashboardController extends Controller
             ->whereMonth('issue_date', Carbon::now()->month)
             ->sum('total_amount');
 
+        $monthlySales = $this->getSalesDataByRange(1);
+
         if (Auth::check()) {
-            return view('dashboard.dashboard', compact('customerCount', 'totalStock', 'soldProductsThisMonth', 'totalSalesThisMonth', 'totalProductionThisMonth'));
+            return view('dashboard.dashboard', compact('customerCount', 'totalStock', 'soldProductsThisMonth', 'totalSalesThisMonth', 'totalProductionThisMonth', 'monthlySales'));
         }
 
         return redirect()->route('login')
             ->withErrors([
                 'email' => 'Please login to access the dashboard.',
             ])->onlyInput('email');
+    }
+
+    private function getSalesDataByRange($months)
+    {
+      $startDate = now()->subMonths($months);
+      $endDate = now();
+  
+      return Transaction::where('status', 'close')
+        ->whereBetween('issue_date', [$startDate, $endDate])
+        ->orderBy('issue_date')
+        ->get(['issue_date', 'total_amount']);
     }
 }
