@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Customers</title>
+    <title>Sistem Informasi Inventory</title>
 
     <!-- Custom fonts for this template -->
     <link href="{{ asset('style/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">

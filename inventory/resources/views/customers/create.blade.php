@@ -48,7 +48,7 @@
 
                 <!-- Button simpan -->
                 <div class="col-md-12 mb-2">
-                    <button type="submit" class="btn btn-primary" name="add_customer">Simpan Data</button>
+                    <button type="submit" class="btn btn-primary" name="add_customer">Save Data</button>
                     <a href="{{ route('customers.index') }}" class="btn btn-secondary">Cancel</a>
                 </div>
             </div>

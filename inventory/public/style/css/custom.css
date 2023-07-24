@@ -12,6 +12,16 @@
     height: 30px;
 }
 
-.jenis-pelanggan-container {
-    margin-left: 10px;
+.table-transaction {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.table-transaction th, .table-transaction td {
+    border: none;
+    padding: 8px;
+}
+
+.table-transaction th {
+    text-align: left;
 }
