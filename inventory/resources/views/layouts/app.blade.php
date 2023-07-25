@@ -158,7 +158,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('style/img/undraw_profile.svg') }}">
                             </a>
@@ -166,7 +167,8 @@
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
 
-                                <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="{{ route('logout') }}" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -241,6 +243,8 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('style/vendor/js/sb-admin-2.js') }}"></script>
+
+    <script src="{{ asset('style/js/sb-admin-2.js') }}"></script>
 
     <!-- Page level plugins -->
     <script src="{{ asset('style/vendor/datatables/jquery.dataTables.min.js') }}"></script>
