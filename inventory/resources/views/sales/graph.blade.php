@@ -90,20 +90,20 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 mt-1  p-2 h-100 " margin: auto;">
+            <div class="col-sm-6 mt-1  p-2 h-100 " margin: auto;">
                 <div class="border p-2 " style="border-radius:8px;"><canvas id="monthlySalesChart"></canvas>
                 </div>
             </div>
 
-            <div class="col-6 mt-1  p-2 " margin: auto;">
+            <div class="col-sm-6 mt-1  p-2 " margin: auto;">
                 <div class="border p-2" style="border-radius:8px;"><canvas id="threeMonthsSalesChart"></canvas></div>
             </div>
 
-            <div class="col-6 mt-1  p-2 " margin: auto;">
+            <div class="col-sm-6 mt-1  p-2 " margin: auto;">
                 <div class="border p-2" style="border-radius:8px;"><canvas id="oneYearSalesChart"></canvas></div>
             </div>
 
-            <div class="col-6 mt-1  p-2 " margin: auto;">
+            <div class="col-sm-6 mt-1  p-2 " margin: auto;">
                 <div class="border p-2" style="border-radius:8px;"><canvas id="customSalesChart"></canvas></div>
             </div>
 
