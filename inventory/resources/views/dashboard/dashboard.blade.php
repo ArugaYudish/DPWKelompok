@@ -111,7 +111,7 @@
 
             <div class="col-xl-8 col-md-6 mb-4 row ">
                 <div class="col-12 mt-1  h-100 " margin: auto;">
-                    <div class="border p-2 " style="border-radius:8px;"><canvas id="monthlySalesChart"></canvas>
+                    <div class="border p-2 bg-white " style="border-radius:8px;"><canvas id="monthlySalesChart"></canvas>
                     </div>
                 </div>
             </div>
