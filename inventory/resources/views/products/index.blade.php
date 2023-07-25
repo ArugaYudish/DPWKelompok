@@ -3,8 +3,12 @@
 @section('content')
     <div class="row w-100">
         <h1 class="col-md-9 col-sm-6 h3 mb-2 text-gray-800">Data Produk Bricket</h1>
-        <a href="{{ route('products.create') }}" class="btn btn-primary mb-2 float-right col-sm-6 col-md-3">Tambah Produksi
-            Bricket</a>
+        <a href="{{ route('products.create') }}" class="tn btn-primary btn-icon-split  mb-2 float-right col-sm-6 col-md-3" style="border-radius:6px;" >
+            <span class="icon text-white-50">
+                <i class="fas fa-plus"></i>
+            </span>
+            <span class="text">Tambah Produksi Bricket</span>
+            </a>
     </div>
     <p>Total Quantity: {{ $totalQuantity }}</p>
 
