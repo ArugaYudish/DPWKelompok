@@ -43,9 +43,9 @@
                                         <input type="submit" class="col-md-12 btn btn-primary" value="Login">
                                     </div>
                                 </form>
-                                <div class="text-center">
+                                {{-- <div class="text-center">
                                     <a class="small" href="register.html">Create an Account!</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
