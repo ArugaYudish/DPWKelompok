@@ -31,7 +31,6 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Customer</th>
                             <th>Date</th>
                             <th>Quantity Product</th>
@@ -45,7 +44,6 @@
                     <tbody>
                         @foreach ($transactions as $transaction)
                         <tr>
-                            <td>{{ $transaction->id }}</th>
                             <td>{{ $transaction->customer->name }}</td>
                             <td>{{ $transaction->issue_date }}</td>
                             <td>{{ $transaction->quantity_product }}</td>
